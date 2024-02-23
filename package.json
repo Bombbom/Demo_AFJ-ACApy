@@ -15,5 +15,9 @@
     "@hyperledger/indy-vdr-nodejs": "^0.1.0",
     "@inquirer/prompts": "^4.1.0",
     "inquirer": "^9.2.15"
+  },
+
+  "resolutions": {
+    "ref-napi": "npm:@2060.io/ref-napi"
   }
 }
