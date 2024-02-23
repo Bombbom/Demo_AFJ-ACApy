@@ -1,7 +1,12 @@
 import type { InitConfig } from '@aries-framework/core'
 import { Agent } from '@aries-framework/core'
 import { agentDependencies } from '@aries-framework/node'
+import { HttpOutboundTransport, WsOutboundTransport } from '@aries-framework/core'
+import { HttpInboundTransport } from '@aries-framework/node'
 
+/**
+ * 
+ */
 const config: InitConfig = {
   label: 'docs-agent-nodejs',
   walletConfig: {
@@ -10,20 +15,26 @@ const config: InitConfig = {
   },
 }
 
+/**
+ * 
+ */
 const agent = new Agent({
   config,
   dependencies: agentDependencies,
 })
 
-import { HttpOutboundTransport, WsOutboundTransport } from '@aries-framework/core'
-import { HttpInboundTransport } from '@aries-framework/node'
 
-// ... agent setup from prevous section ...
 
+/**
+ * 
+ */
 agent.registerOutboundTransport(new HttpOutboundTransport())
 agent.registerOutboundTransport(new WsOutboundTransport())
 agent.registerInboundTransport(new HttpInboundTransport({ port: 3000 }))
 
+/**
+ * 
+ */
 agent
   .initialize()
   .then(() => {
@@ -32,5 +43,3 @@ agent
   .catch((e) => {
     console.error(`Something went wrong while setting up the agent! Message: ${e}`)
   })
-
-  

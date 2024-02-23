@@ -1,0 +1,17 @@
+{
+  "name": "MyDemo-AFJ-ACApy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@aries-framework/anoncreds": "^0.4.0",
+    "@aries-framework/anoncreds-rs": "^0.4.0",
+    "@aries-framework/askar": "^0.4.0",
+    "@aries-framework/core": "^0.4.0",
+    "@aries-framework/indy-vdr": "^0.4.0",
+    "@aries-framework/node": "^0.4.0",
+    "@hyperledger/anoncreds-nodejs": "^0.1.0",
+    "@hyperledger/aries-askar-nodejs": "^0.1.0",
+    "@hyperledger/indy-vdr-nodejs": "^0.1.0"
+  }
+}
