@@ -1,0 +1,23 @@
+docker run  -u root -dit --net=host bcgovimages/aries-cloudagent:py36-1.16-0_0.6.0 start \
+    --label Mediator  \
+    -it ws 0.0.0.0 8000 \
+    -ot ws \
+    --admin 0.0.0.0 11000 \
+    --admin-insecure-mode \
+    --genesis-url http://test.bcovrin.vonx.io/genesis\
+    --seed Mediation00000000000000000000002 \
+    --endpoint ws://127.0.0.1:8000/ \
+    --debug-connections \
+    --auto-provision \
+    --wallet-type indy \
+    --wallet-name Mediation \
+    --wallet-key abcd@1234 \
+    --auto-accept-invites \
+    --auto-accept-requests \
+    --auto-respond-credential-proposal \
+    --auto-respond-credential-offer \
+    --auto-respond-credential-request \
+    --auto-store-credential \
+    --open-mediation \
+    --public-invites \
+    --invite-public
