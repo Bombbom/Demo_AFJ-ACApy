@@ -1,4 +1,5 @@
-import { prompt } from 'inquirer'
+// import { prompt } from 'inquirer'
+import  prompt  from 'inquirer'
 
 import { Title } from './OutputClass'
 

@@ -206,6 +206,7 @@ const run = async () => {
                     {
                         console.log("Bob send: ",payload.message.content);
                     }
+                    
                 }
               );
             console.log(payload.connectionRecord.id);
